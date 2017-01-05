@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128px" height="66px" viewBox="0 0 128 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - Damage Interior</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="99-Photo-Grid" sketch:type="MSArtboardGroup" transform="translate(-408.000000, -1948.000000)" fill="#FFFFFF">
+            <g id="Photo-Grid" sketch:type="MSLayerGroup" transform="translate(85.000000, 810.000000)">
+                <g id="Row-1" sketch:type="MSShapeGroup">
+                    <g id="Photo-Tile-Copy-11" transform="translate(258.000000, 1035.000000)">
+                        <g id="VIN" transform="translate(-115.000000, -21.000000)">
+                            <g id="Icon---Damage-Interior" transform="translate(180.000000, 124.000000)">
+                                <g id="Seat-Rear" transform="translate(59.231373, 0.000000)">
+                                    <path d="M31.4433287,46.0598667 L7.95730699,43.9090956 C3.56296552,43.5066766 0,46.7642987 0,51.1852715 L0,65.2666667 L48.1882353,65.2666667 L48.1882353,62.5322555 L48.2614161,62.555334 L68.0385037,3.47794101 L58.9077919,0.598450188 C54.7041162,-0.727234577 49.9590071,1.42075614 48.30999,5.39634122 L31.4433287,46.0598667 Z" id="Rectangle-486"></path>
+                                </g>
+                                <g id="Seat-Front">
+                                    <path d="M3.75757555,45.2251726 C1.49989342,46.4282436 0,48.8050484 0,51.6727235 L0,66 L48.375,66 L48.375,62.2160404 L68.0385037,3.47794101 L58.9077919,0.598450188 C54.7041162,-0.727234577 49.9590071,1.42075614 48.30999,5.39634122 L40.3010946,24.7048408 L46.5557491,22.7892652 L38.9021935,36.1072279 L51.5762563,44.7855443 L36.3919399,47.1053674 L37.5091078,62.4251906 L26.2281306,52 L14.9471534,62.4251906 L16.0643213,47.1053674 L3.75757555,45.2251726 Z M26,47.5 L18.6239764,54.3164708 L19.3544324,44.2996633 L9.42622549,42.7828559 L17.7131127,37.1085721 L12.7088648,28.4006734 L22.3119882,31.3417646 L26,22 L29.6880118,31.3417646 L39.2911352,28.4006734 L34.2868873,37.1085721 L42.5737745,42.7828559 L32.6455676,44.2996633 L33.3760236,54.3164708 L26,47.5 Z" id="Rectangle-486"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

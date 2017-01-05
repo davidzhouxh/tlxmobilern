@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="68px" height="46px" viewBox="0 0 68 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - Damage Other</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="99-Photo-Grid" sketch:type="MSArtboardGroup" transform="translate(-208.000000, -1954.000000)" fill="#FFFFFF">
+            <g id="Photo-Grid" sketch:type="MSLayerGroup" transform="translate(85.000000, 810.000000)">
+                <g id="Row-1" sketch:type="MSShapeGroup">
+                    <g id="Photo-Tile-Copy-12" transform="translate(0.000000, 1035.000000)">
+                        <g id="VIN" transform="translate(-115.000000, -21.000000)">
+                            <g id="Icon---Damage-Other" transform="translate(238.000000, 129.000000)">
+                                <g id="Seat-Front">
+                                    <path d="M39.4833324,9.1463921 L31.1161698,12.1233555 L31.373284,2.83203922 L26.1199951,10.5 L20.8667062,2.83203922 L21.1238205,12.1233555 L12.3667062,9.00765071 L18.0360147,16.3733555 L9.11999512,19 L18.0360147,21.6266445 L12.3667062,28.9923493 L21.1238205,25.8766445 L20.8667062,35.1679608 L26.1199951,27.5 L31.373284,35.1679608 L31.1161698,25.8766445 L39.873284,28.9923493 L34.2039755,21.6266445 L38.1834246,20.4543054 L35.5709972,20.5806415 L38.8810561,17.7512157 L34.2039755,16.3733555 L39.6541262,9.29238598 L39.4833324,9.1463921 Z M8.8830013,43.7525909 L5.10014542,47.0625488 L5.47476592,42.198564 L0.383001299,41.462029 L4.6330013,38.706697 L2.06653054,34.4782951 L6.99157336,35.9064371 L8.8830013,31.3702411 L10.7744292,35.9064371 L15.6994721,34.4782951 L13.1330013,38.706697 L17.3830013,41.462029 L12.2912367,42.198564 L12.6658572,47.0625488 L8.8830013,43.7525909 Z M55,18.9377115 L49.897177,24.2892504 L50.2856062,17.0888024 L42.6806954,17.4565733 L48.3328404,12.625141 L42.6806954,7.79370871 L50.2856062,8.16147959 L49.897177,0.961031635 L55,6.3125705 L60.102823,0.961031635 L59.7143938,8.16147959 L67.3193046,7.79370871 L61.6671596,12.625141 L67.3193046,17.4565733 L59.7143938,17.0888024 L60.102823,24.2892504 L55,18.9377115 Z" id="Rectangle-486"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

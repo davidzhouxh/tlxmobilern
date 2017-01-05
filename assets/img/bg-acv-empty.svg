@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 379 415"
+	 style="enable-background:new 0 0 379 415;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:10.3125;}
+	.st1{fill:none;stroke:#000000;stroke-width:15.4688;}
+	.st2{font-family:'SourceSansPro-Bold';}
+	.st3{font-size:48px;}
+</style>
+<title>Icon - Vehicle Front + VEHICLE ASSESSMENTS</title>
+<desc>Created with Sketch.</desc>
+<g id="Mobile" sketch:type="MSPage">
+	<g id="_x32_-List-Empty" transform="translate(-186.000000, -539.000000)" sketch:type="MSArtboardGroup">
+		
+			<g id="Icon---Vehicle-Front-_x2B_-VEHICLE-ASSESSMENTS" transform="translate(10.000000, 539.000000)" sketch:type="MSLayerGroup">
+			<g id="Icon---Vehicle-Front" transform="translate(200.000000, 0.000000)" sketch:type="MSShapeGroup">
+				<path id="Rectangle-486" class="st0" d="M0,120.2c0-11.4,9.2-20.6,20.6-20.6h288.7c11.4,0,20.6,9.2,20.6,20.6v103H0V120.2z
+					 M49,171.7c12.8,0,23.2-10.4,23.2-23.2S61.8,125.3,49,125.3s-23.2,10.4-23.2,23.2S36.2,171.7,49,171.7z M281,171.7
+					c12.8,0,23.2-10.4,23.2-23.2s-10.4-23.2-23.2-23.2s-23.2,10.4-23.2,23.2S268.2,171.7,281,171.7z"/>
+				<path id="Rectangle-487" class="st0" d="M25.8,212.9h46.4v36c0,10-8.1,18-18,18H43.8c-10,0-18-8.1-18-18V212.9z"/>
+				<path id="Rectangle-489" class="st1" d="M50,31.8C53.2,20.9,65,12,76.4,12h175.8c11.4,0,23.3,8.8,26.6,19.7l19.3,63.6
+					c3.3,10.9-3.2,19.7-14.6,19.7H46.4c-11.4,0-18-8.9-14.8-19.8L50,31.8z"/>
+				<path id="Rectangle-487-Copy" class="st0" d="M257.8,212.9h46.4v36c0,10-8.1,18-18,18h-10.3c-10,0-18-8.1-18-18V212.9z"/>
+			</g>
+			<text transform="matrix(1 0 0 1 173.768 414)" class="st2 st3">NO ASSESSMENTS</text>
+		</g>
+	</g>
+</g>
+</svg>
