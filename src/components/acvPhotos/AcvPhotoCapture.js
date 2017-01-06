@@ -45,12 +45,17 @@ class AcvPhotoCapture extends Component {
                 break;
             case 'vinFromVehicle':
                 Actions.vin();
+                break;
+            case 'interior':
+                Actions.interior();      
+                break;          
+            case 'odometer':
+                Actions.odometer();      
+                break; 
             default:
                 Actions.yearModel();
 
-        }        
-        // Actions.acvPhotoCapture({photoId: 'vehicleTitle', type: 'reset'});
-        // Actions.refresh({photoId: 'vehicleTitle'});
+        }
     }
 
     componentDidMount() {

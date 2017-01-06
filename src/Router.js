@@ -32,6 +32,7 @@ import Aircondition from './components/Aircondition';
 import Console from './components/Console';
 import Odor from './components/Odor';
 import Overall from './components/Overall';
+import Heat from './components/Heat';
 
 import AcvPhotoCapture from './components/acvPhotos/AcvPhotoCapture';
 import AcvPhotoReview from './components/acvPhotos/AcvPhotoReview';
@@ -76,7 +77,7 @@ const RouterComponent = () => {
           <Scene key='console' component={Console} />          
           <Scene key='odor' component={Odor} />          
           <Scene key='overall' component={Overall} />          
-
+          <Scene key='heat' component={Heat} />     
 
           <Scene key='fullScreenPhoto' component={FullScreenPhoto} hideNavBar={true} sceneStyle={{ paddingTop: 0 }} />
           <Scene key='acvPhotoReview' component={AcvPhotoReview} hideNavBar={true} title='TLX Mobile RN' />
