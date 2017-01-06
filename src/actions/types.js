@@ -32,4 +32,11 @@ export const ENGINE_NOISE_CONDITION = 'engine_noise_condition';
 export const TRANSMISSION_SHIFT_CONDITION = 'transmission_shift_condition';
 export const DASHBOARD_CONDITION = 'dashboard_condition';
 export const ODOMETER_CONDITION = 'odometer_condition';
-
+export const ELECTRONICS_CONDITION = 'electronics_condition';
+export const CONSOLE_CONDITION = 'console_condition';
+export const AIRCONDITION_CONDITION = 'aircondition_condition';
+export const HEAT_CONDITION = 'heat_condition';
+export const ODOR_CONDITION = 'odor_condition';
+export const ENGINE_APPEARANCE_CONDITION = 'engine_appearance_condition';
+export const OVERALL_CONDITION = 'overall_condition';
+export const NOTES_CHANGED = 'notes_changed';

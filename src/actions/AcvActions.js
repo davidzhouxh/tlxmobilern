@@ -27,7 +27,15 @@ import {
     ENGINE_NOISE_CONDITION,
     TRANSMISSION_SHIFT_CONDITION,
     DASHBOARD_CONDITION,
-    ODOMETER_CONDITION
+    ODOMETER_CONDITION,
+    ELECTRONICS_CONDITION,
+    CONSOLE_CONDITION,
+    AIRCONDITION_CONDITION,
+    HEAT_CONDITION,
+    ODOR_CONDITION,
+    ENGINE_APPEARANCE_CONDITION,
+    OVERALL_CONDITION,
+    NOTES_CHANGED
 } from './types';
 
 export const acvUpdate = ({ prop, value }) => {
@@ -274,3 +282,65 @@ export const odometerConditionSelect = ({option}) => {
     }
 };
 
+export const electronicsConditionSelect = ({option}) => {
+
+    return {
+        type: ELECTRONICS_CONDITION,
+        payload: { option }
+    }
+};
+
+export const consoleConditionSelect = ({option}) => {
+
+    return {
+        type: CONSOLE_CONDITION,
+        payload: { option }
+    }
+};
+
+export const airconditionConditionSelect = ({option}) => {
+
+    return {
+        type: AIRCONDITION_CONDITION,
+        payload: { option }
+    }
+};
+
+export const heatConditionSelect = ({option}) => {
+
+    return {
+        type: HEAT_CONDITION,
+        payload: { option }
+    }
+};
+
+export const odorConditionSelect = ({option}) => {
+
+    return {
+        type: ODOR_CONDITION,
+        payload: { option }
+    }
+};
+
+export const engineAppearanceConditionSelect = ({option}) => {
+
+    return {
+        type: ENGINE_APPEARANCE_CONDITION,
+        payload: { option }
+    }
+};
+
+export const overallConditionSelect = ({option}) => {
+
+    return {
+        type: OVERALL_CONDITION,
+        payload: { option }
+    }
+};
+
+export const notesChanged = (text) => {
+    return {
+        type: NOTES_CHANGED,
+        payload: text
+    };
+};

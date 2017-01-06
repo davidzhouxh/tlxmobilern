@@ -25,7 +25,15 @@ import {
     ENGINE_NOISE_CONDITION,
     TRANSMISSION_SHIFT_CONDITION,
     DASHBOARD_CONDITION,
-    ODOMETER_CONDITION
+    ODOMETER_CONDITION,
+    ELECTRONICS_CONDITION,
+    CONSOLE_CONDITION,
+    AIRCONDITION_CONDITION,
+    HEAT_CONDITION,
+    ODOR_CONDITION,
+    ENGINE_APPEARANCE_CONDITION,
+    OVERALL_CONDITION,
+    NOTES_CHANGED
 
 } from '../actions/types';
 
@@ -72,7 +80,7 @@ export default (state = INITIAL_STATE, action) => {
         case PHOTO_TAKEN:
             // return { ...state, currentPhoto: action.payload.currentPhoto, currentAcv: { ...state.currentAcv, photos: state.currentAcv.photos.map((photo) => photo.id === action.payload.photoId ? {...photo, url: action.payload.path} : photo) } };
             let id = action.payload.photoId;
-            return { ...state, currentPhoto: action.payload.currentPhoto, currentAcv: { ...state.currentAcv, photos: {...state.currentAcv.photos, [id] : { ...state.currentAcv.photos[id], url: action.payload.path } } } };
+            return { ...state, currentPhoto: action.payload.currentPhoto, currentAcv: { ...state.currentAcv, photos: {...state.currentAcv.photos, [id]: { ...state.currentAcv.photos[id], url: action.payload.path } } } };
         case VIN_CHANGED:
             return { ...state, currentAcv: { ...state.currentAcv, vehicleInformation: {...state.currentAcv.vehicleInformation, vin: action.payload } } };
         case INTERIOR_CONDITION:
@@ -89,6 +97,22 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, dash: action.payload.option.value } } } };
         case ODOMETER_CONDITION:
             return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, odometer: action.payload.option.value } } } };
+        case ELECTRONICS_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, electronics: action.payload.option.value } } } };
+        case CONSOLE_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, console: action.payload.option.value } } } };
+        case AIRCONDITION_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, airCondition: action.payload.option.value } } } };
+        case HEAT_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, heat: action.payload.option.value } } } };
+        case ODOR_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, odor: action.payload.option.value } } } };
+        case ENGINE_APPEARANCE_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, vehicleRating: {...state.currentAcv.vehicleCondition.vehicleRating, engineAppearance: action.payload.option.value } } } };
+        case OVERALL_CONDITION:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, overallCondition: action.payload.option.value } } };
+        case NOTES_CHANGED:
+            return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, notes: action.payload } } };
 
 
         case EMPLOYEE_SAVE_SUCCESS:

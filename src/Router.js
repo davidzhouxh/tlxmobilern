@@ -25,6 +25,14 @@ import Upholstery from './components/Upholstery';
 import Vin from './components/Vin';
 import EngineNoise from './components/EngineNoise';
 import TransmissionShift from './components/TransmissionShift';
+import Electronics from './components/Electronics';
+import EngineAppearance from './components/EngineAppearance';
+import AdditionalNotes from './components/AdditionalNotes';
+import Aircondition from './components/Aircondition';
+import Console from './components/Console';
+import Odor from './components/Odor';
+import Overall from './components/Overall';
+
 import AcvPhotoCapture from './components/acvPhotos/AcvPhotoCapture';
 import AcvPhotoReview from './components/acvPhotos/AcvPhotoReview';
 
@@ -60,6 +68,14 @@ const RouterComponent = () => {
           <Scene key='vin' component={Vin} />          
           <Scene key='engineNoise' component={EngineNoise} />          
           <Scene key='transmissionShift' component={TransmissionShift} />          
+
+          <Scene key='electronics' component={Electronics} />          
+          <Scene key='engineAppearance' component={EngineAppearance} />          
+          <Scene key='additionalNotes' component={AdditionalNotes} />          
+          <Scene key='aircondition' component={Aircondition} />          
+          <Scene key='console' component={Console} />          
+          <Scene key='odor' component={Odor} />          
+          <Scene key='overall' component={Overall} />          
 
 
           <Scene key='fullScreenPhoto' component={FullScreenPhoto} hideNavBar={true} sceneStyle={{ paddingTop: 0 }} />

@@ -3,23 +3,23 @@ import { View, ScrollView, Text, TouchableWithoutFeedback } from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
-import { odometerConditionSelect } from '../actions';
+import { odorConditionSelect } from '../actions';
 import { Condition, Header, Footer } from './common';
 
-class Odometer extends Component {
+class Odor extends Component {
     onPrevious() {
         Actions.pop();
     }
 
     onNext() {
-        Actions.electronics();
+        Actions.engineAppearance();
     }
 
     render() {
         const options = [
-            { label: '5 digit', value: 'Rough' },
-            { label: 'Broken', value: 'Average' },
-            { label: 'Functional', value: 'Clean' },
+            { label: 'Bad Odor', value: 'Rough' },
+            { label: 'Satisfactory', value: 'Average' },
+            { label: 'Good Odor', value: 'Clean' },
         ];
 
         return (
@@ -28,9 +28,9 @@ class Odometer extends Component {
                 <ScrollView>
                     <Condition
                         options={options}
-                        title='Rate the condition of the ODOMETER'
-                        hintText='Inspect the vehicle ODOMETER and rate it appropriately.'
-                        onSelection={option => this.props.odometerConditionSelect({ option })}
+                        title='Rate the ODOR of the interior'
+                        hintText='ODORS from the cooling system can indicate future issues.'
+                        onSelection={option => this.props.odorConditionSelect({ option })}
                         />
                 </ScrollView>
                 <Footer onPrevious={this.onPrevious.bind(this)} onNext={this.onNext.bind(this)} />
@@ -44,5 +44,5 @@ const mapStateToProps = ({acv}) => {
     return { currentAcv };
 }
 
-export default connect(mapStateToProps, { odometerConditionSelect })(Odometer);
+export default connect(mapStateToProps, { odorConditionSelect })(Odor);
 

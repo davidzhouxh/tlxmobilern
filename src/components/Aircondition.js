@@ -3,23 +3,23 @@ import { View, ScrollView, Text, TouchableWithoutFeedback } from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
-import { odometerConditionSelect } from '../actions';
+import { airconditionConditionSelect } from '../actions';
 import { Condition, Header, Footer } from './common';
 
-class Odometer extends Component {
+class Aircondition extends Component {
     onPrevious() {
         Actions.pop();
     }
 
     onNext() {
-        Actions.electronics();
+        Actions.heat();
     }
 
     render() {
         const options = [
-            { label: '5 digit', value: 'Rough' },
-            { label: 'Broken', value: 'Average' },
-            { label: 'Functional', value: 'Clean' },
+            { label: 'Warm / Not Functional', value: 'Rough' },
+            { label: 'Cool', value: 'Average' },
+            { label: 'Cold', value: 'Clean' },
         ];
 
         return (
@@ -28,9 +28,9 @@ class Odometer extends Component {
                 <ScrollView>
                     <Condition
                         options={options}
-                        title='Rate the condition of the ODOMETER'
-                        hintText='Inspect the vehicle ODOMETER and rate it appropriately.'
-                        onSelection={option => this.props.odometerConditionSelect({ option })}
+                        title='Rate the condition of the A/C'
+                        hintText='With the engine running, put A/C at maximum cool.'
+                        onSelection={option => this.props.airconditionConditionSelect({ option })}
                         />
                 </ScrollView>
                 <Footer onPrevious={this.onPrevious.bind(this)} onNext={this.onNext.bind(this)} />
@@ -44,5 +44,5 @@ const mapStateToProps = ({acv}) => {
     return { currentAcv };
 }
 
-export default connect(mapStateToProps, { odometerConditionSelect })(Odometer);
+export default connect(mapStateToProps, { airconditionConditionSelect })(Aircondition);
 
