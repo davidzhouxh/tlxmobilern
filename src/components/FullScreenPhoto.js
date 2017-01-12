@@ -55,8 +55,14 @@ class FullScreenPhoto extends Component {
       this.camera.capture()
         .then((data) => {
           // this.setState({ activePhoto: data });
+
           this.props.photoTaken({ photoId: this.props.photoId, path: data.path, currentPhoto: this.state.activePhoto });
           Actions.acvPhotoReview({ photoId: this.props.photoId });
+
+
+          // console.log(data);
+          // Actions.photoReviewTemp( { photo: data });
+
         })
         .catch(err => console.error(err));
     }

@@ -35,7 +35,9 @@ import {
     ODOR_CONDITION,
     ENGINE_APPEARANCE_CONDITION,
     OVERALL_CONDITION,
-    NOTES_CHANGED
+    NOTES_CHANGED,
+    PHOTO_SENT,
+    TOTAL_PHOTOS_TO_SEND
 } from './types';
 
 export const acvUpdate = ({ prop, value }) => {
@@ -342,5 +344,19 @@ export const notesChanged = (text) => {
     return {
         type: NOTES_CHANGED,
         payload: text
+    };
+};
+
+export const photoSent = (photoId, guid) => {
+    return {
+        type: PHOTO_SENT,
+        payload: { photoId, guid }
+    };
+};
+
+export const updateTotalPhotosToSend = (totalPhotosToSend) => {
+    return {
+        type: TOTAL_PHOTOS_TO_SEND,
+        payload: totalPhotosToSend
     };
 };

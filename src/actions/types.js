@@ -40,3 +40,5 @@ export const ODOR_CONDITION = 'odor_condition';
 export const ENGINE_APPEARANCE_CONDITION = 'engine_appearance_condition';
 export const OVERALL_CONDITION = 'overall_condition';
 export const NOTES_CHANGED = 'notes_changed';
+export const PHOTO_SENT = 'photo_sent';
+export const TOTAL_PHOTOS_TO_SEND = 'total_photos_to_send';

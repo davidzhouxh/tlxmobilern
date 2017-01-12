@@ -33,6 +33,7 @@ import Console from './components/Console';
 import Odor from './components/Odor';
 import Overall from './components/Overall';
 import Heat from './components/Heat';
+import PhotoReviewTemp from './components/PhotoReviewTemp';
 
 import AcvPhotoCapture from './components/acvPhotos/AcvPhotoCapture';
 import AcvPhotoReview from './components/acvPhotos/AcvPhotoReview';
@@ -52,7 +53,7 @@ const RouterComponent = () => {
           <Scene key='acvPhotoCapture' hideNavBar={true} component={AcvPhotoCapture} title='TLX Mobile RN' onRight={() => Actions.glass()} rightTitle="Next >" />       
           <Scene key='titleStatus' component={TitleStatus} title='TLX Mobile RN' onRight={() => Actions.titleRemark()} rightTitle="Next >"/>
           <Scene key='titleRemark' component={TitleRemark} title='TLX Mobile RN' onRight={() => Actions.customerBorrow()} rightTitle="Next >"/>          
-          <Scene key='customerBorrow' component={CustomerBorrow} title='TLX Mobile RN' onRight={() => Actions.yearModel()} rightTitle="Next >"/>       
+          <Scene key='customerBorrow' component={CustomerBorrow} title='TLX Mobile RN' onRight={() => Actions.yearModel()} rightTitle="Next >" />       
           <Scene key='yearModel' component={YearModel} title='TLX Mobile RN' onRight={() => Actions.specialtyVehicle()} rightTitle="Next >"/>          
           <Scene key='specialtyVehicle' component={SpecialtyVehicle} title='TLX Mobile RN' onRight={() => Actions.vehicleInfo()} rightTitle="Next >"/>
           <Scene key='vehicleInfo' component={VehicleInfo} title='TLX Mobile RN' onRight={() => Actions.paint()} rightTitle="Next >"/>          
@@ -82,6 +83,8 @@ const RouterComponent = () => {
           <Scene key='fullScreenPhoto' component={FullScreenPhoto} hideNavBar={true} sceneStyle={{ paddingTop: 0 }} />
           <Scene key='acvPhotoReview' component={AcvPhotoReview} hideNavBar={true} title='TLX Mobile RN' />
           <Scene key='photoReview' component={PhotoReview} hideNavBar={true} title='TLX Mobile RN' />
+
+          <Scene key='photoReviewTemp' component={PhotoReviewTemp} hideNavBar={true} title='TLX Mobile RN' />
 
       </Scene>
     </Router>

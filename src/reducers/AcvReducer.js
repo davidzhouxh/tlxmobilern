@@ -33,7 +33,9 @@ import {
     ODOR_CONDITION,
     ENGINE_APPEARANCE_CONDITION,
     OVERALL_CONDITION,
-    NOTES_CHANGED
+    NOTES_CHANGED,
+    PHOTO_SENT,
+    TOTAL_PHOTOS_TO_SEND
 
 } from '../actions/types';
 
@@ -41,6 +43,8 @@ const INITIAL_STATE = {
     currentAcv: null,
     currentPhoto: null,
     acvCollection: [],
+    totalPhotosToSend: 0,
+    totalPhotosSent: 0
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -113,7 +117,12 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, overallCondition: action.payload.option.value } } };
         case NOTES_CHANGED:
             return { ...state, currentAcv: { ...state.currentAcv, vehicleCondition: {...state.currentAcv.vehicleCondition, notes: action.payload } } };
-
+        case PHOTO_SENT:
+            let pid = action.payload.photoId;
+            let newTotal = state.totalPhotosSent++;
+            return { ...state, totalPhotosSent: newTotal, currentPhoto: action.payload.currentPhoto, currentAcv: { ...state.currentAcv, photos: {...state.currentAcv.photos, [id]: { ...state.currentAcv.photos[pid], guid: action.payload.guid } } } };
+        case TOTAL_PHOTOS_TO_SEND:
+            return { ...state, totalPhotosToSend: action.payload };
 
         case EMPLOYEE_SAVE_SUCCESS:
             return INITIAL_STATE;
