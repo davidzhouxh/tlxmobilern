@@ -13,7 +13,8 @@ class VehicleInfo extends Component {
     }
 
     onNext() {
-        Actions.paint();
+        // Actions.paint();
+        Actions.acvPhotoCapture({ photoId: 'front', type: 'reset' });
     }
 
     onMakeChange(text) {

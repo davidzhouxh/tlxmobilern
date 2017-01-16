@@ -123,10 +123,7 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, totalPhotosSent: newTotal, currentPhoto: action.payload.currentPhoto, currentAcv: { ...state.currentAcv, photos: {...state.currentAcv.photos, [id]: { ...state.currentAcv.photos[pid], guid: action.payload.guid } } } };
         case TOTAL_PHOTOS_TO_SEND:
             return { ...state, totalPhotosToSend: action.payload };
-
-        case EMPLOYEE_SAVE_SUCCESS:
-            return INITIAL_STATE;
         default:
-            return state;
+            return INITIAL_STATE;
     }
 };

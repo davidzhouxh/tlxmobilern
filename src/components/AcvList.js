@@ -57,14 +57,6 @@ class AcvList extends Component {
             titleStatus: ''
         };
 
-        //   acv.photos = _(AllAcvVehiclePhotos).keyBy('id').mapValues(function(photo) {
-        //     return {
-        //       imageTitle: photo.id,
-        //       serverImageLabel: photo.serverId,
-        //       url: ''
-        //     };
-        //   }).value();
-
         acv.photos = this.createAcvPhotos();
 
         acv.isValid = false;
@@ -72,34 +64,6 @@ class AcvList extends Component {
     }
 
     createAcvPhotos() {
-        // let acvPhotos = [
-        //     {
-        //         id: 'govId',
-        //         serverId: 'Gov. Pic ID',
-        //         title: 'GOV. PIC ID',
-        //         hintText: "Capture a photo of the borrower's GOV. PIC ID. Be sure the photo is clear and legible.",
-        //         url: '',
-        //         placeholderUrl: 'photo_guide_govid'
-        //     },
-        //     {
-        //         id: 'vehicleTitle',
-        //         serverId: 'Title',
-        //         title: 'VEHICLE TITLE',
-        //         hintText: "Capture a photo of the VEHICLE TITLE. Be sure the photo is clear and legible.",
-        //         url: '',
-        //         placeholderUrl: 'photo_guide_vehicle_title'
-        //     },
-        //     {
-        //         id: 'vinFromTitle',
-        //         serverId: 'VIN from title',
-        //         title: 'VIN from TITLE',
-        //         hintText: "Capture a close-up photo of the VIN on the TITLE, and then enter the LAST 6 DIGITS of the VIN. Be sure the photo is clear and legible.",
-        //         url: '',
-        //         placeholderUrl: 'photo_guide_vin_from_title'
-        //     }            
-        // ];
-        // return acvPhotos;
-
 
         let acvPhotos = {
             govId : {

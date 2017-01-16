@@ -11,8 +11,8 @@ class SpecialtyVehicle extends Component {
     }
 
     onNext() {
-        // Actions.vehicleInfo();
-        Actions.acvPhotoCapture({ photoId: 'front', type: 'reset' });
+        Actions.vehicleInfo();
+        // Actions.acvPhotoCapture({ photoId: 'front', type: 'reset' });
     }
 
 

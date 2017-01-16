@@ -51,17 +51,7 @@ export const acvCreate = ({ acv }) => {
     return {
         type: ACV_CREATE,
         payload: { acv }
-    }
-    //   const { currentUser } = firebase.auth();
-
-    //   return (dispatch) => {
-    //     firebase.database().ref(`/users/${currentUser.uid}/acvs`)
-    //       .push({ name, phone, shift })
-    //       .then(() => {
-    //         dispatch({ type: ACV_CREATE });
-    //         Actions.acvList({ type: 'reset' });
-    //       });
-    //   };
+    };
 };
 
 export const acvsFetch = () => {

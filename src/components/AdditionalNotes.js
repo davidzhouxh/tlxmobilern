@@ -9,6 +9,8 @@ import { Button, Card, CardSection, Input, Spinner, Confirm, Header, Footer } fr
 
 class AdditionalNotes extends Component {
 
+    state = { photoSent: 0 };
+
     onNotesChange(text) {
         this.props.notesChanged(text);
     }
@@ -22,10 +24,11 @@ class AdditionalNotes extends Component {
     }
 
     sendPhoto(photo) {
+        let that = this;
         NativeModules.RNImageToBase64.getBase64String(photo.url, (err, base64) => {
 
             //TODO set headers by interceptor
-            var config = {
+            let config = {
                 headers: {
                     'store-number': 30289,
                     'user-name': 'tlxtestcsr2txcso',
@@ -41,10 +44,12 @@ class AdditionalNotes extends Component {
             axios.post('http://10.241.2.97:8181/mobile-acv-service/api/images', body, config)
                 .then(resp => {
                     console.log(resp);
+                    that.setState({ photoSent: that.state.photoSent + 1 });
                     let photoId = photo.id;
                     let guid = resp.data;
-                    this.props.photoSent(photoId, guid);
-                    this.sendACVIfReady.bind(this);
+                    that.props.photoSent(photoId, guid);
+                    that.sendACVIfReady();
+
                 })
                 .catch((error) => console.log(error));
 
@@ -52,13 +57,60 @@ class AdditionalNotes extends Component {
     }
 
     sendACVIfReady() {
-        if (this.props.totalPhotosToSend !== 0 && this.props.totalPhotosSent !== 0 &&
-            this.props.totalPhotosToSend === this.props.totalPhotosSent) {
+        if (this.props.totalPhotosToSend !== 0 &&
+            this.props.totalPhotosToSend === this.state.photoSent) {
             console.log('All photos uploaded, ready to send ACV...');
+            console.log(this.props.currentAcv);
+            let transformedACV = this.transformACV(this.props.currentAcv);
+            let config = {
+                headers: {
+                    'store-number': 30289,
+                    'user-name': 'tlxtestcsr2txcso',
+                    'access-token': 'eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJUTVggRmluYW5jZSIsImF1ZCI6ImFjdi1tb2JpbGUiLCJleHAiOjE0NjMxMTAxNTQsImp0aSI6IlJrWDByR082UTl0TnVWTkxDVDh3dkEiLCJpYXQiOjE0NjMwNzU5NTQsIm5iZiI6MTQ2MzA3NTgzNCwic3ViIjoic2FpLnRhdnR1bSgzNjQ1NSkifQ.qSRdowIOPBTtcVyzqq-2NwUPMsFCWdzE9s012z2e4BO3xNgHS6iz4IyMt550qG44sCh6Kdg5j4qpQg-tnCTeXw'
+                }
+            };
+            axios.post('http://10.241.2.97:8181/mobile-acv-service/api/acv', transformedACV, config)
+                .then(resp => console.log(resp))
+                .catch(error => console.log(error));
         } else {
             console.log('More photos to send, hang on...');
+            console.log(this.props.currentAcv);
         }
     }
+
+    transformACV(assessment) {
+        var transformedAssessment = {
+            vehicleInformation: {},
+            vehicleCondition: {},
+            preQualificationInfo: {},
+            acvImages: []
+        };
+
+        transformedAssessment.userName = assessment.userName;
+
+        if (assessment.isSpeciality === 'Y' || assessment.vehicleInformation.year <= 1980) {
+            assessment.vehicleInformation.olderVin = 'Y';
+        } else {
+            assessment.vehicleInformation.olderVin = 'N';
+        }
+
+        transformedAssessment.vehicleInformation = assessment.vehicleInformation;
+        transformedAssessment.vehicleCondition = assessment.vehicleCondition;
+        transformedAssessment.preQualificationInfo = assessment.preQualificationInfo;
+
+        let acvPhotos = assessment.photos;
+        for (var propt in acvPhotos) {
+            let acvImage = {};
+            if (acvPhotos[propt].guid) {
+                acvImage.type = acvPhotos[propt].serverImageLabel;
+                acvImage.guild = acvPhotos[propt].guid;
+                transformedAssessment.acvImages.push(acvImage);
+            }
+        }
+
+        return transformedAssessment;
+    }
+
 
     onButtonPress() {
         debugger;
