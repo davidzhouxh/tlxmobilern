@@ -1,13 +1,15 @@
 import React from 'react';
 import { TextInput, View, Text, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, keyboardType }) => {
   const { inputStyle, labelStyle, containerStyle } = styles;
 
   return (
     <View style={containerStyle}>
-      <Text style={labelStyle}>{label}</Text>
+      <Icon name="ios-book" color="white" />
       <TextInput
+        underlineColorAndroid='transparent'
         secureTextEntry={secureTextEntry}
         keyboardType={keyboardType}
         placeholder={placeholder}
@@ -22,12 +24,18 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, keybo
 
 const styles = StyleSheet.create({
   inputStyle: {
-    color: '#000',
+    color: 'white',
     paddingRight: 5,
     paddingLeft: 5,
     fontSize: 18,
     lineHeight: 23,
-    flex: 2
+    flex: 1,
+    borderRadius: 25,
+    borderWidth: 1,
+    borderColor: 'royalblue',
+    backgroundColor: 'royalblue',
+    textAlign: 'center',
+ 
   },
   labelStyle: {
     fontSize: 18,

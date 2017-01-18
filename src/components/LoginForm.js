@@ -61,7 +61,7 @@ class LoginForm extends Component {
         </CardSection>
         <CardSection>
           <Input
-            placeholder="first.last"
+            placeholder="USERNAME"
             label="Username"
             value={this.props.username}
             onChangeText={this.onUsernameChange.bind(this)}
@@ -70,7 +70,7 @@ class LoginForm extends Component {
 
         <CardSection>
           <Input
-            placeholder="12345"
+            placeholder="STOREID"
             keyboardType="numeric"
             label="Store ID"
             value={this.props.storeNumber}
@@ -81,7 +81,7 @@ class LoginForm extends Component {
         <CardSection>
           <Input
             secureTextEntry
-            placeholder="password"
+            placeholder="PASSWORD"
             label="Password"
             value={this.props.password}
             onChangeText={this.onPasswordChange.bind(this)}
