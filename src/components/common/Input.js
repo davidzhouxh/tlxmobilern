@@ -2,12 +2,14 @@ import React from 'react';
 import { TextInput, View, Text, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, keyboardType }) => {
-  const { inputStyle, labelStyle, containerStyle } = styles;
+const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, keyboardType, startIcon, endIcon, maxLength, errorHighLight }) => {
+
+
+  const { inputStyle, labelStyle, containerStyle, startIconStyle, endIconStyle, containerHighLight } = styles;
 
   return (
-    <View style={containerStyle}>
-      <Icon name="ios-book" color="white" />
+    <View style={errorHighLight ? containerHighLight : containerStyle}>
+      <Icon style={startIconStyle} name={startIcon} color="white" size={20} />
       <TextInput
         underlineColorAndroid='transparent'
         secureTextEntry={secureTextEntry}
@@ -17,7 +19,10 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, keybo
         style={inputStyle}
         value={value}
         onChangeText={onChangeText}
-      />
+        maxLength={maxLength}
+      >
+      </TextInput>
+      <Icon style={endIconStyle} name={endIcon} color="white" size={20} />
     </View>
   );
 };
@@ -27,15 +32,18 @@ const styles = StyleSheet.create({
     color: 'white',
     paddingRight: 5,
     paddingLeft: 5,
+    flex: 5,
     fontSize: 18,
-    lineHeight: 23,
-    flex: 1,
-    borderRadius: 25,
-    borderWidth: 1,
-    borderColor: 'royalblue',
-    backgroundColor: 'royalblue',
+    lineHeight: 28,
     textAlign: 'center',
  
+  },
+  startIconStyle: {
+    flex: 1,
+    left: 26
+  },
+  endIconStyle: {
+    flex: 1,
   },
   labelStyle: {
     fontSize: 18,
@@ -43,11 +51,28 @@ const styles = StyleSheet.create({
     flex: 1
   },
   containerStyle: {
-    height: 40,
+    height: 50,
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    borderRadius: 25,
+    borderWidth: 5,
+    borderColor: 'royalblue',
+    backgroundColor: 'royalblue',
+  },
+  containerHighLight: {
+    height: 50,
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 25,
+    borderWidth: 5,
+    borderColor: 'red',
+    backgroundColor: 'royalblue',
   }
+
 });
 
 export { Input };

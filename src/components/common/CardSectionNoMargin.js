@@ -2,8 +2,13 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 const CardSectionNoMargin = (props) => {
+
+  const containerStyles = [styles.containerStyle];
+  if(props.justifyContent){
+    containerStyles.push({justifyContent: props.justifyContent});
+  }
   return (
-    <View style={styles.containerStyle}>
+    <View style={containerStyles}>
       {props.children}
     </View>
   );
