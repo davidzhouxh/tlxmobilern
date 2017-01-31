@@ -1,12 +1,18 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const Button = ({ onPress, children, disabled, color }) => {
+const Button = ({ onPress, children, disabled, color, flex, style }) => {
   const { buttonStyle, textStyle, buttonDisabled, textDisabled } = styles;
 
   const buttonStyles = [buttonStyle];
   if(color){
     buttonStyles.push({backgroundColor: color, borderColor: color});
+  }
+  if(flex){
+    buttonStyles.push({flex: flex});
+  }
+  if(style){
+    buttonStyles.push(style);
   }
 
   return (

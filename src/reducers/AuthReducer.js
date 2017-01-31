@@ -10,9 +10,9 @@ import {
 } from '../actions/types';
 
 const INITIAL_STATE = {
-    username: '',
-    storeNumber: '',
-    password: '',
+    username: 'tlxtestcsr2txcso',
+    storeNumber: '30289',
+    password: 'Testing1',
     user: null,
     error: '',
     loading: false,

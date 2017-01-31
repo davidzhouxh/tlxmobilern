@@ -7,6 +7,15 @@ const CardSectionNoMargin = (props) => {
   if(props.justifyContent){
     containerStyles.push({justifyContent: props.justifyContent});
   }
+  if(props.flexDirection){
+    containerStyles.push({ flexDirection: props.flexDirection})
+  }
+  if(props.padding){
+    containerStyles.push({ padding: props.padding})
+  }
+  if(props.style){
+    containerStyles.push(props.style);
+  }  
   return (
     <View style={containerStyles}>
       {props.children}
@@ -16,7 +25,7 @@ const CardSectionNoMargin = (props) => {
 
 const styles = StyleSheet.create({
   containerStyle: {
-    padding: 2,
+    padding: 3,
     backgroundColor: '#fff',
     justifyContent: 'flex-start',
     flexDirection: 'row',

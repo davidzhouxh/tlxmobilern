@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableWithoutFeedback } from 'react-native';
-import { RadioButtons } from 'react-native-radio-buttons';
+import { ScrollView, View, Text, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
 
-class RadioEntry extends Component {
+class RadioEntryNew extends Component {
 
     constructor(props) {
         super(props);
@@ -10,62 +10,27 @@ class RadioEntry extends Component {
     }
 
     render() {
-        const { options, title, hintText, onSelection } = this.props;
+        return (<ScrollView style={{
+            backgroundColor: '#eeeeee'
+        }}>
+            {this.renderCheckList()}
+        </ScrollView>);
+    }
+
+
+
+    renderCheckList() {
+        const options = [
+            "American",
+            "Australian",
+            "British",
+        ];
 
         function setSelectedOption(checkListOption) {
-
             this.setState({
                 checkListOption,
             });
-            onSelection(checkListOption);
         }
-
-        // function renderOption(option, selected, onSelect, index) {
-
-        //     const textStyle = {
-        //         paddingTop: 10,
-        //         paddingBottom: 10,
-        //         color: 'black',
-        //         flex: 1,
-        //         fontSize: 18,
-        //     };
-        //     const baseStyle = {
-        //         flexDirection: 'row',
-        //     };
-        //     var style;
-        //     var checkMark;
-
-        //     if (index > 0) {
-        //         style = [baseStyle, {
-        //             borderTopColor: '#eeeeee',
-        //             borderTopWidth: 1,
-        //         }];
-        //     } else {
-        //         style = baseStyle;
-        //     }
-
-        //     if (selected) {
-        //         checkMark = <Text style={{
-        //             flex: 0.1,
-        //             color: '#0de010',
-        //             fontWeight: 'bold',
-        //             paddingTop: 8,
-        //             fontSize: 25,
-        //             alignSelf: 'center',
-        //         }}>✓</Text>;
-        //     }
-
-        //     return (
-        //         <TouchableWithoutFeedback onPress={onSelect} key={index}>
-        //             <View style={style}>
-        //                 <Text style={textStyle}>{option}</Text>
-        //                 {checkMark}
-        //             </View>
-        //         </TouchableWithoutFeedback>
-        //     );
-        // }
-
-
 
         function renderOption(option, selected, onSelect, index) {
 
@@ -139,10 +104,6 @@ class RadioEntry extends Component {
             );
         }
 
-
-
-
-
         function renderContainer(options) {
             return (
                 <View style={{
@@ -161,7 +122,7 @@ class RadioEntry extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <View style={{ marginTop: 10, backgroundColor: 'white' }}>
-                    <Text style={{ padding: 10, color: 'black', fontSize: 15 }}>{title}</Text>
+                    <Text style={{ padding: 20, fontWeight: 'bold' }}>VerticalSelect</Text>
 
                     <View style={{
                         backgroundColor: '#eeeeee',
@@ -174,7 +135,7 @@ class RadioEntry extends Component {
                             marginBottom: 5,
                             marginTop: 5,
                             fontSize: 12,
-                        }}>{hintText}</Text>
+                        }}>ACCENT</Text>
                         <RadioButtons
                             options={options}
                             onSelection={setSelectedOption.bind(this)}
@@ -183,11 +144,17 @@ class RadioEntry extends Component {
                             renderContainer={renderContainer}
                             />
                     </View>
-
+                    <Text style={{
+                        margin: 20,
+                    }}>Selected accent: {this.state.checkListOption || 'none'}</Text>
                 </View>
             </View>);
+
     }
+
+
 }
 
-export { RadioEntry };
+
+export { RadioEntryNew };
 

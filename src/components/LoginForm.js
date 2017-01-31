@@ -155,12 +155,13 @@ class LoginForm extends Component {
             visible={this.props.showModal}
             onAccept={this.onAccept.bind(this)}
             onDecline={this.onDecline.bind(this)}
+            title="LEGAL TERMS"
+            hint="By clicking “I Agree” below, you acknowledge and agree as follows:"
+            content=". Employees using this application must be clocked in to the company timekeeping system &mdash; off-the-clock work is prohibited."
+            additionalContent=". Information gathered using this application is confidential and proprietary and for company use only  &mdash; misuse or disclosure of such information is strictly prohibited."
             >
-            By clicking “I Agree” below, you acknowledge and agree as follows:
-
-            Employees using this application must be clocked in to the company timekeeping system &mdash; off-the-clock work is prohibited.
-            Information gathered using this application is confidential and proprietary and for company use only  &mdash; misuse or disclosure of such information is strictly prohibited.
         </Confirm>
+
         </Card>
       </ScrollView>
     );

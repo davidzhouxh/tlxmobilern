@@ -38,9 +38,13 @@ import PhotoReviewTemp from './components/PhotoReviewTemp';
 import AcvPhotoCapture from './components/acvPhotos/AcvPhotoCapture';
 import AcvPhotoReview from './components/acvPhotos/AcvPhotoReview';
 
+import {RadioEntryNew} from './components/common/RadioEntryNew';
+
 const RouterComponent = () => {
   return (
     <Router>
+    
+      
       <Scene key="auth">
         <Scene key="login" component={LoginForm} hideNavBar={true} sceneStyle={{ paddingTop: 0 }} />
       </Scene>
@@ -85,6 +89,8 @@ const RouterComponent = () => {
           <Scene key='photoReview' component={PhotoReview} hideNavBar={true} title='TLX Mobile RN' />
 
           <Scene key='photoReviewTemp' component={PhotoReviewTemp} hideNavBar={true} title='TLX Mobile RN' />
+
+
 
       </Scene>
     </Router>
